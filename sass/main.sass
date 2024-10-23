@@ -1,0 +1,56 @@
+$font-size-base: 1.2rem
+$font-size-primary: 1.5rem
+$font-size-btn: 1.8rem
+$font-size-heading: calc(1.525rem + 3.3vw)
+$font-color-main: #000
+$bg-orange:#c44903
+$border-style: 2px solid $font-color-main
+$border-radius: 15px
+$font-color-white: #fff
+$transition: all .3s ease-in-out
+
+@mixin section_label-text
+    text-transform: uppercase
+    font-style: normal
+    font-weight: 400
+    font-size: 12px
+    line-height: 100%
+    letter-spacing: .1em
+    cursor: pointer
+    padding: 33px 16px 4px
+ 
+// width
+@mixin r($width) 
+    @media only screen and (max-width: $width+ "px") 
+        @content  
+
+@mixin rmin($width) 
+    @media only screen and (min-width: $width+ "px") 
+        @content  
+
+html,body
+    margin: 0
+    padding: 0    
+
+a
+    text-decoration: none
+    color: #fff
+
+.container_main
+    max-width: 1440px
+    margin: 0 auto
+    padding: 0 60px
+    
+.additional-wrapper
+    padding-top: 120px
+
+@import blocks/_nav
+@import blocks/_header
+@import blocks/_blog
+@import blocks/_services
+@import blocks/_portfolio
+@import blocks/_contacts
+@import blocks/_footer
+@import blocks/_modal
+@import blocks/_cookie
+@import variables/media

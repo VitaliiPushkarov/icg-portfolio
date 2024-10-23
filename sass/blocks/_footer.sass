@@ -1,0 +1,190 @@
+
+@keyframes infinite-line 
+	100% 
+		transform: translateX(-100%)  
+
+footer 
+	background: #101014
+	color: #fff
+	padding-bottom: 24px
+	.phone-policies
+		list-style: none
+
+	.infinite-text-line 
+		display: flex
+		flex-direction: row
+		overflow: hidden
+		margin-bottom: 48px
+
+		@include rmin(1024) 
+			margin-bottom: 64px 
+
+		ul 
+			display: flex
+			flex-direction: row
+			animation: infinite-line 30s linear infinite forwards
+
+			li 
+				margin: 0 12px
+
+				a 
+					font-size: 14px
+					font-style: normal
+					font-weight: 400
+					line-height: 16px
+					letter-spacing: 1.4px
+					text-transform: uppercase
+					white-space: nowrap
+					color: $bg-orange    
+
+	.footer_top 
+		padding-bottom: 48px
+
+		@include rmin(1024) 
+			display: grid
+			grid-template-columns: repeat(12, minmax(0, 1fr))
+			gap: 24px 
+
+		.footer_logo 
+			display: none
+			@include rmin(1024) 
+				display: block
+				grid-column: span 5 / span 5 
+
+			img 
+				width: 200px
+				height: 219px  
+
+		.footer_logo_mobile 
+			display: block
+			margin-bottom: 40px
+
+			@include rmin(1024) 
+				display: none 
+
+			img 
+				height: 45px  
+
+		.footer_navigation 
+			width: 50%
+
+			display: flex
+			flex-direction: column
+			gap: 40px
+
+			@include rmin(768) 
+				width: 100%
+				display: grid
+				grid-template-columns: repeat(8, minmax(0, 1fr))
+				gap: 24px 
+
+			@include rmin(1024) 
+				grid-column: span 7 / span 7
+				grid-template-columns: repeat(7, minmax(0, 1fr)) 
+
+			.footer_navigation_item 
+				&:first-of-type 
+					@include rmin(768) 
+						grid-column: span 3 / span 3  
+
+				&:nth-of-type(2) 
+					@include rmin(768) 
+						grid-column: span 5 / span 5 
+
+					@include rmin(1024) 
+						grid-column: span 4 / span 4  
+
+				.navigation_item_title 
+					font-size: 12px
+					line-height: 16px
+					letter-spacing: 1.2px
+					text-transform: uppercase
+					color: #E0E1ED
+					margin-bottom: 24px 
+
+				.footer_navigation_list 
+					list-style: none
+					display: flex
+					flex-direction: column
+					gap: 12px
+
+					.navigation_list_item 
+						a 
+							text-decoration: none
+							color: #fff
+							background-image: linear-gradient(#fff, #fff)
+							background-position: 0% 100%
+							background-repeat: no-repeat
+							background-size: 0% 1px
+							transition: background-size .3s
+							font-size: 14px
+							line-height: 18px
+							letter-spacing: -0.42px
+
+							&:hover 
+								background-size: 100% 1px       
+
+	.footer_bottom 
+		position: relative
+		background-color: #101014
+		border-top: 1px solid #2D2D39
+		padding-top: 24px
+		padding-bottom: 24px
+
+		@include rmin(768) 
+			display: grid
+			grid-template-columns: repeat(8, minmax(0, 1fr))
+			gap: 24px 
+
+		@include rmin(1024) 
+			grid-template-columns: repeat(12, minmax(0, 1fr)) 
+
+		.copyright 
+			font-size: 24px
+			letter-spacing: 0.1em
+			margin-bottom: 24px
+
+			@include rmin(768) 
+				margin-bottom: 0
+				grid-column: span 3 / span 3 
+
+			@include rmin(1024) 
+				grid-column: span 5 / span 5  
+
+		a 
+			color: #fff
+			text-decoration: none
+			background-image: linear-gradient(#fff, #fff)
+			background-position: 0% 100%
+			background-repeat: no-repeat
+			background-size: 0% 1px
+			transition: background-size .3s
+			font-size: 14px
+			line-height: 16px
+
+			&:hover 
+				background-size: 100% 1px  
+
+		.desktop-policies 
+			display: none
+
+			@include rmin(1024) 
+				display: block
+
+				&:nth-of-type(2) 
+
+					grid-column: span 3 / span 3 
+
+				&:nth-of-type(3) 
+					grid-column: span 4 / span 4   
+
+		.mobile-policies
+			@include rmin(768) 
+				grid-column: span 5 / span 5 
+
+			@include rmin(1024) 
+				display: none    
+		.phone-policies
+			@include rmin(768) 
+				grid-column: span 5 / span 5 
+
