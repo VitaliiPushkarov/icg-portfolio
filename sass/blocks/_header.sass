@@ -1,0 +1,119 @@
+.main-header
+    position: fixed
+    width: 100%
+    background-color: $bg-orange
+    display: flex
+    transition: $transition
+    border-bottom: 1px solid transparent
+    z-index: 100
+    &-inner-wrapper
+        height: 80px
+        display: inline-flex
+        flex: 1
+        flex-wrap: nowrap
+        align-items: flex-start
+    &-sections-wrapper
+        display: contents
+        margin: 0 auto
+    &-section
+        display: block
+        cursor: pointer
+        &_label
+            display: block
+            position: relative
+            color: #fff
+            @include section_label-text
+            &-hover
+                position: absolute
+                top: 19px
+                right: 1px
+                pointer-events: none
+                transform: translate(100%, -100%)
+                opacity: 0
+    .right-controls
+        display: inline-flex
+        margin-left: auto
+    .user-auth
+        text-align: right
+        flex: 0 0 auto
+    .new-button
+        padding: 3px 24px 0 
+        display: inline-flex
+        height: 48px
+        width: auto
+        -webkit-box-orient: horizontal
+        -webkit-box-direction: normal
+        flex-direction: row
+        -webkit-box-pack: center
+        justify-content: center
+        align-items: center
+        border-radius: 100px
+        text-transform: uppercase
+        font-style: normal
+        font-size: 14px
+        border: 1px solid transparent
+        line-height: 18px
+        letter-spacing: 1.6px
+        margin-top: 13.5px
+    .button-transp-brand
+        background-color: transparent
+        border-color: #fff
+        color: #fff
+        &:hover
+            color: #000
+            border-color: #000
+
+    .logo
+        height: 64px
+        width: 246px
+        margin-top: 12px
+        object-fit: contain
+        flex: 0 0 auto
+        font-size: 30px
+        text-align: center
+    .mob-burger
+        display: none
+        position: absolute
+        right: 24px
+        top: 3px
+        width: 60px
+        height: 60px
+.main-header .mob-burger:after, .main-header .mob-burger:before
+    content: ""
+    display: block
+    height: 1.33px
+    width: 20px
+    border-radius: 50px
+    background-color: #fff
+    position: relative
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+    transform-origin: left center
+    top: 21px
+    left: 29px
+.main-header .mob-burger:after
+    margin-top: 6px
+.main-header .mob-burger.is-active:before
+    transform: rotate(45deg)
+    top: 20px
+.main-header .mob-burger.is-active:after
+    transform: rotate(-45deg)
+    top: 27px
+.main-header.scroll-shadow
+    border-color: #9092aa
+    box-shadow: 0 4px 24px rgba(189,191,209,.24)
+    transition: all 1.5s ease-in-out
+.head-title
+    width: 100%
+    background-color: $bg-orange
+    transition: $transition
+    margin: 0 auto
+    &-wrapper
+        padding-bottom: 80px
+    &-text
+        display: block
+        padding-top: 140px 
+        font-size: 96px
+        color: #fff
+        letter-spacing: 3px
+        line-height: 98px
